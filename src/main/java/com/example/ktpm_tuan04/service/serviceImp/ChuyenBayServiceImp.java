@@ -17,4 +17,19 @@ public class ChuyenBayServiceImp implements ChuyenBayService {
     public List<ChuyenBay> getDSChuyenBayByGaden(String gaden){
         return chuyenBayRepo.findChuyenBaysByGaden(gaden);
     }
+
+    @Override
+    public List<ChuyenBay> getDSChuyenBayByDodai(long from, long to){
+        return  chuyenBayRepo.findChuyenBayByDodaiTrongKhoan(from,to);
+    }
+
+    @Override
+    public List<ChuyenBay> getDSChuyenBayByGadiGaden(String from, String to){
+        return  chuyenBayRepo.findChuyenBayByGadiGaden(from,to);
+    }
+
+    @Override
+    public Integer countChuyenByXuatphatTu(String gadi){
+        return  chuyenBayRepo.countChuyenByXuatphatTu(gadi);
+    }
 }

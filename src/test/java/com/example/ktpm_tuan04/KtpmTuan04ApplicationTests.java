@@ -26,7 +26,7 @@ class KtpmTuan04ApplicationTests {
 
     @Test
     void cau02(){
-        System.out.println("====== Cau 03 =======");
+        System.out.println("====== Cau 02 =======");
         mayBayService.getDSMaybayByTambayGreater(10000).stream().forEach(System.out::println);
     }
 
@@ -35,6 +35,27 @@ class KtpmTuan04ApplicationTests {
         System.out.println("====== Cau 03 =======");
         nhanVienService.getDSNhanVienByLuongGreater(10000d).stream().forEach(System.out::println);
     }
+
+    @Test
+    void cau04(){
+        System.out.println("====== Cau 04 =======");
+        chuyenBayService.getDSChuyenBayByDodai(8000,10000).stream().forEach(System.out::println);
+    }
+
+    @Test
+    void cau05(){
+        System.out.println("====== Cau 05 =======");
+        chuyenBayService.getDSChuyenBayByGadiGaden("SGN","BMV").stream().forEach(System.out::println);
+    }
+
+    @Test
+    void cau06(){
+        System.out.println("====== Cau 06 =======");
+        System.out.println(">>>>>> So chuyen bay: " + chuyenBayService.countChuyenByXuatphatTu("SGN"));
+
+    }
+
+
 
 
 }
